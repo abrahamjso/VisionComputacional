@@ -119,7 +119,7 @@ def window():
 	
 	root.mainloop()
 
-def call(im): #Metodo que limpia la ventana para poner la nueva imagen
+def call(im): #Metodo que ponemos la nueva imagen
     global panel
     img = ImageTk.PhotoImage(im)
     panel = Label(image = img)
@@ -127,7 +127,7 @@ def call(im): #Metodo que limpia la ventana para poner la nueva imagen
     panel.pack() 
 
 def original(): #Metodo del Boton para llamar la imagen Original
-	panel.destroy()   #Destruimos el panel para poner la nueva
+	panel.destroy()   #Destruimos el panel para poner la nueva imagen
 	return call(Image.open(path_image)) 
 
 def grayScale(): #Metodo del Boton para llamar la escala de grises
